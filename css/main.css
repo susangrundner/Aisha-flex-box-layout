@@ -108,7 +108,7 @@ body {
   display: flex;
   justify-content: center;
   font-size: 1.2em;
-  align-items: flex-start;
+  align-items: center;
   height: 100%;
 }
 
@@ -116,16 +116,15 @@ body {
   display: flex;
   align-items: center;
   flex-flow: row wrap;
-  justify-content: space-between;
-  height: 100%;
-  padding-top: 40px;
+  justify-content: flex-start;
+  height: 85%;
+  Width: 100%;
   max-width: 1200px;
 }
 
 .flex-items {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   width: 30%;
   line-height: 1.5em;
   font-size: 1em;
@@ -159,19 +158,19 @@ main p {
 }
 
 #div-1 {
-  padding-right: 20px;
+    padding-right: 20px;
+}
+
+#div-2 {
+    padding-right: 20px;
 }
 
 #div-1, #div-2 {
   border-right: 1px solid #555;
 }
 
-#div-1, #div-2, #div-3 {
-  align-items: flex-start;
-}
-
 #div-2, #div-3 {
-  padding: 20px;
+  padding-left: 20px;
 }
 
 footer {
@@ -268,24 +267,17 @@ footer a {
    Modify as content requires.
    ========================================================================== */
 
-@media all and (min-width: 1200px) {
+@media (min-width: 1201px) {
     body {
       padding: 1em;
     }
 }
 
-@media (min-width: 768px) {
-  #div-1,
-  #div-2{
-      /* set your flex value to 1 50% */
-     flex-basis: 1 50%;
+@media (min-width: 768px) and (max-width: 1200px;) {
+    .flex-items {
+        width: 100%;
+    }
   }
-
-  #div-3 {
-    /* set your flex value to 1 100% */
-     flex-basis: 1 100%;
-  }
-}
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
